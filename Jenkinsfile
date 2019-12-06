@@ -21,7 +21,7 @@ pipeline{
                 script{
                     try {
                         withSonarQubeEnv('SonarQubeDocker') {
-                            sh "${scannerHome}/bin/sonar-scanner -Dsonar.login=7670abce644c280edbfe4be5e7f4d29906e384b9 -Dsonar.projectKey=SpringBoot -Dsonar.java.binaries=./build/libs/"
+                            sh "${scannerHome}/bin/sonar-scanner -Dsonar.login=7670abce644c280edbfe4be5e7f4d29906e384b9 -Dsonar.projectKey=SpringBootRealworld -Dsonar.java.binaries=./build/libs/"
                         }
                         sleep(60)
                         timeout(time: 10, unit: 'MINUTES') {
